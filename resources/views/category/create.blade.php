@@ -7,11 +7,15 @@
     <title>categorCreation</title>
 </head>
 <body>
+<h2>hello {{auth()->user()->name}}</h2>
 <h2>Category creation </h2>
-<form method="POST" action="/save">
+<form method="POST" action="{{ route('category.save') }}">
 @csrf
   <label for="fname">Name:</label>
-  <input type="text" name="name" ><br>
+  <input type="text" name="name" class="@error('name') is-invalid @enderror" ><br>
+  @error('name')
+  <div class="alert alert-danger"> {{ $message }}</div>
+  @enderror
   <button>Submit</button>
 </form>
 </body>

@@ -32,6 +32,7 @@ tr:nth-child(even) {
     <th>slug</th>
     <th>is_used</th>
     <th>cat_id</th>
+    <th>cat_name</th>
   </tr>
 
   <tr>
@@ -41,6 +42,7 @@ tr:nth-child(even) {
     <td>{{$art->slug}}</td>
     <td>{{$art->is_used}}</td>
     <td>{{$art->cat_id}}</td>
+    <td>{{$art->categoeris->name}}</td>
   </tr>
 </table>
 </body>

@@ -42,8 +42,8 @@ tr:nth-child(even) {
     <td>{{$categories->id}}</td>
     <td>{{$categories->name}}</td>
     <td><a href="/catgorydetails/{{$categories->id}}">show</a></td>
-    <td><a href="/edit/{{$categories->id}}">edit</a></td>
-    <form method="POST" action="/delete/{{$categories->id}}"> 
+    <td><a href="/edits/{{$categories->id}}">edit</a></td>
+    <form method="POST" action="/deletes/{{$categories->id}}"> 
     @csrf
     @method('DELETE')
     <td> <button>Delete</button></td>

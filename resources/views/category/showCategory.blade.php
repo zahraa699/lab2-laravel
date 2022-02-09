@@ -28,11 +28,37 @@ tr:nth-child(even) {
 <tr>
     <th>ID</th>
     <th>Name</th>
+
   </tr>
 
   <tr>
     <td>{{$category ->id}}</td>
     <td>{{$category ->name}}</td>
+
+    
+  </tr>
+</table>
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Details</th>
+    <th>slug</th>
+    <th>is_used</th>
+    <th>cat_id</th>
+
+  </tr>
+<tr>
+    @foreach($cate as $cateoy)
+    <td>{{$cateoy ->id}}</td>
+    <td>{{$cateoy ->name}}</td>
+    <td>{{$cateoy ->details}}</td>
+    <td>{{$cateoy ->slug}}</td>
+    <td>{{$cateoy ->is_used }}</td>
+    <td>{{$cateoy ->cat_id }}</td>
+    @endforeach
+    <br>
+
   </tr>
 </table>
 </body>

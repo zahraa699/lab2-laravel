@@ -8,10 +8,14 @@
 </head>
 <body>
 <h2>Category creation </h2>
-<form method="POST" action="/edit">
+<form method="POST" action="{{ route('category.update',['id'=>$category->id])}}">
 @csrf
+@method('PUT')
   <label for="fname">Name:</label>
-  <input type="text" name="name" value="{{$category->name}}" ><br>
+  <input type="text" name="name" value="{{$category->name}}" class="@error ('name') is-invalid @enderror" ><br>
+  @error('name')
+  <div class="alert alert-danger"> {{$message}}</div>
+  @enderror
   <button>update</button>
 </form>
 </body>
