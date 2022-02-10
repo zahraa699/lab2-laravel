@@ -25,7 +25,12 @@
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
+            <!-- date  -->
+            <div class="mt-4">
+                <x-label for="dateofbirth" :value="__('Date Of Birth')" />
 
+                <x-input id="dateofbirth" class="block mt-1 w-full" type="date" name="dateofbirth" :value="old('dateofbirth')" required />
+            </div>
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
